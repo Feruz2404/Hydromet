@@ -9,8 +9,7 @@ export default function ContactSection() {
         aria-hidden="true"
         className="pointer-events-none absolute -right-24 -top-24 h-[480px] w-[480px] rounded-full"
         style=
-          background:
-            "radial-gradient(circle, rgba(14,95,163,0.30), transparent 70%)",
+          background: "radial-gradient(circle, rgba(14,95,163,0.30), transparent 70%)",
         
       />
 
