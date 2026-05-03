@@ -9,20 +9,11 @@ export default function HeroSection() {
       {/* Background */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style=
-          background:
-            "radial-gradient(ellipse 80% 60% at 70% 40%, rgba(14,95,163,0.35) 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 20% 80%, rgba(58,175,223,0.12) 0%, transparent 60%)",
-        
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_40%,rgba(14,95,163,0.35)_0%,transparent_70%),radial-gradient(ellipse_50%_50%_at_20%_80%,rgba(58,175,223,0.12)_0%,transparent_60%)]"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.04]"
-        style=
-          backgroundImage:
-            "linear-gradient(rgba(58,175,223,1) 1px, transparent 1px), linear-gradient(90deg, rgba(58,175,223,1) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        
+        className="pointer-events-none absolute inset-0 opacity-[0.04] [background-image:linear-gradient(rgba(58,175,223,1)_1px,transparent_1px),linear-gradient(90deg,rgba(58,175,223,1)_1px,transparent_1px)] [background-size:60px_60px]"
       />
 
       <div className="relative mx-auto w-full max-w-6xl px-5 py-14 md:px-8 md:py-20">

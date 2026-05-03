@@ -5,13 +5,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="relative overflow-hidden bg-navy py-16 md:py-24">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-24 -top-24 h-[480px] w-[480px] rounded-full"
-        style=
-          background: "radial-gradient(circle, rgba(14,95,163,0.30), transparent 70%)",
-        
-      />
+      <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-sky-300/20 blur-3xl" />
 
       <div className="relative mx-auto max-w-6xl px-5 md:px-8">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
