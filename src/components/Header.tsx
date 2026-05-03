@@ -8,7 +8,7 @@ function BrandMark(props: { sizeClassName: string }) {
   return (
     <div
       className={cn(
-        "shrink-0 overflow-hidden rounded-2xl border border-sky/20 bg-white/[0.06] p-2 shadow-[0_10px_30px_rgba(0,0,0,0.25)]",
+        "shrink-0 overflow-hidden rounded-2xl border border-sky/25 bg-white/[0.92] p-[6px] shadow-[0_14px_34px_rgba(0,0,0,0.30)]",
         props.sizeClassName,
       )}
       aria-hidden="true"
@@ -24,8 +24,8 @@ function BrandMark(props: { sizeClassName: string }) {
           onError={() => setLogoFailed(true)}
         />
       ) : (
-        <div className="flex h-full w-full items-center justify-center rounded-xl bg-gradient-to-br from-sky/20 to-primary/10">
-          <span className="font-serif text-[12px] text-ice/85">O‘zgidromet</span>
+        <div className="flex h-full w-full items-center justify-center rounded-xl bg-white/90">
+          <span className="font-serif text-[12px] text-navy">O‘zgidromet</span>
         </div>
       )}
     </div>
@@ -45,21 +45,21 @@ export default function Header() {
   const nav = useMemo(() => siteContent.nav, [])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-sky/15 bg-navy/85 backdrop-blur supports-[backdrop-filter]:bg-navy/75">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-sky/20 bg-navy/80 backdrop-blur supports-[backdrop-filter]:bg-navy/70">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
         <a
           href="#home"
           className="flex min-w-0 items-center gap-3 text-white"
           aria-label={siteContent.brand.name}
         >
-          {/* 40–48px square container */}
-          <BrandMark sizeClassName="h-10 w-10 md:h-12 md:w-12" />
+          {/* mobile 44px, desktop 52px */}
+          <BrandMark sizeClassName="h-11 w-11 md:h-[52px] md:w-[52px]" />
 
           <div className="min-w-0 leading-tight">
-            <div className="truncate font-serif text-[17px] tracking-tight md:text-[18px]">
+            <div className="truncate font-serif text-[18px] tracking-tight md:text-[19px]">
               {siteContent.brand.name}
             </div>
-            <div className="truncate text-[10px] font-light uppercase tracking-[0.16em] text-ice/60">
+            <div className="hidden truncate text-[10px] font-light uppercase tracking-[0.16em] text-ice/65 sm:block">
               {siteContent.brand.subtitle}
             </div>
           </div>
@@ -70,21 +70,21 @@ export default function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="rounded-md px-3 py-2 text-[13.5px] text-ice/75 transition hover:bg-white/5 hover:text-white"
+              className="rounded-lg px-3 py-2 text-[13.5px] text-ice/75 transition hover:bg-white/5 hover:text-white"
             >
               {item.label}
             </a>
           ))}
           <a
             href="#contact"
-            className="ml-2 inline-flex items-center justify-center rounded-md bg-sky px-4 py-2 text-[13.5px] font-medium text-navy shadow-sm transition hover:bg-sky/90 hover:shadow"
+            className="ml-2 inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-sky to-[#59c9f0] px-4 py-2 text-[13.5px] font-semibold text-navy shadow-[0_10px_22px_rgba(58,175,223,0.25)] transition hover:brightness-105"
           >
             Bog‘lanish
           </a>
         </nav>
 
         <button
-          className="inline-flex items-center justify-center rounded-md p-2 text-ice transition hover:bg-white/5 md:hidden"
+          className="inline-flex items-center justify-center rounded-lg p-2 text-ice transition hover:bg-white/5 md:hidden"
           aria-label="Menyuni ochish"
           onClick={() => setOpen((v) => !v)}
         >
@@ -111,7 +111,7 @@ export default function Header() {
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="rounded-md px-2 py-3 text-[16px] text-ice hover:bg-white/5"
+              className="rounded-lg px-2 py-3 text-[16px] text-ice hover:bg-white/5"
             >
               {item.label}
             </a>
@@ -119,7 +119,7 @@ export default function Header() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-2 inline-flex items-center justify-center rounded-md bg-sky px-4 py-3 font-medium text-navy"
+            className="mt-2 inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-sky to-[#59c9f0] px-4 py-3 font-semibold text-navy"
           >
             Bog‘lanish
           </a>

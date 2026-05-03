@@ -9,7 +9,7 @@ function BrandMark(props: { sizeClassName: string }) {
   return (
     <div
       className={cn(
-        "shrink-0 overflow-hidden rounded-2xl border border-sky/20 bg-white/[0.06] p-2 shadow-[0_10px_30px_rgba(0,0,0,0.25)]",
+        "shrink-0 overflow-hidden rounded-2xl border border-sky/20 bg-white/[0.88] p-[6px] shadow-[0_14px_34px_rgba(0,0,0,0.25)]",
         props.sizeClassName,
       )}
       aria-hidden="true"
@@ -25,8 +25,8 @@ function BrandMark(props: { sizeClassName: string }) {
           onError={() => setLogoFailed(true)}
         />
       ) : (
-        <div className="flex h-full w-full items-center justify-center rounded-xl bg-gradient-to-br from-sky/20 to-primary/10">
-          <span className="font-serif text-[12px] text-ice/85">O‘zgidromet</span>
+        <div className="flex h-full w-full items-center justify-center rounded-xl bg-white/90">
+          <span className="font-serif text-[12px] text-navy">O‘zgidromet</span>
         </div>
       )}
     </div>
@@ -42,13 +42,13 @@ export default function Footer() {
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-5">
             <a href="#home" className="flex min-w-0 items-center gap-3">
-              {/* 32–40px square container */}
-              <BrandMark sizeClassName="h-10 w-10" />
+              {/* 44px square container */}
+              <BrandMark sizeClassName="h-11 w-11" />
               <div className="min-w-0 leading-tight">
                 <div className="truncate font-serif text-base text-white">
                   {siteContent.brand.name}
                 </div>
-                <div className="truncate text-[10px] font-light uppercase tracking-[0.16em] text-ice/60">
+                <div className="truncate text-[10px] font-light uppercase tracking-[0.16em] text-ice/65">
                   {siteContent.brand.subtitle}
                 </div>
               </div>
