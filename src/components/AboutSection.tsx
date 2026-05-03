@@ -2,13 +2,13 @@ import { siteContent } from "../data/siteContent"
 
 export default function AboutSection() {
   return (
-    <section id="about" className="bg-mist py-16 md:py-24">
-      <div className="mx-auto grid max-w-6xl items-start gap-10 px-5 md:px-8 lg:grid-cols-2 lg:gap-16">
+    <section id="about" className="bg-mist py-12 md:py-16 lg:py-20">
+      <div className="mx-auto grid max-w-6xl items-start gap-10 px-5 md:px-8 lg:grid-cols-2 lg:gap-14">
         <div>
           <div className="text-[11px] font-medium uppercase tracking-[0.16em] text-primary">
             {siteContent.about.eyebrow}
           </div>
-          <h2 className="mt-2 font-serif text-[clamp(26px,4vw,40px)] leading-tight text-ink">
+          <h2 className="mt-2 font-serif text-[clamp(24px,3.4vw,38px)] leading-tight text-ink">
             {siteContent.about.title}
           </h2>
           <div className="mt-5 space-y-4 text-[15px] leading-7 text-muted">
@@ -32,7 +32,7 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className="rounded-2xl bg-navy p-7 shadow-soft md:p-10">
+        <div className="rounded-2xl bg-navy p-7 shadow-soft md:p-9">
           <div className="space-y-6">
             <Metric label="Prognoz" value="Yuqori aniqlik" hint="Qisqa muddat" />
             <Metric label="Kuzatuv" value="Uzluksiz" hint="24/7 monitoring" />

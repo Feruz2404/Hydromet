@@ -4,13 +4,13 @@ export default function ReceptionSection() {
   const people = siteContent.leadership.people
 
   return (
-    <section id="reception" className="bg-white py-16 md:py-24">
+    <section id="reception" className="bg-white py-12 md:py-16 lg:py-20">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
-        <div className="mb-10 md:mb-14">
+        <div className="mb-8 md:mb-10">
           <div className="text-[11px] font-medium uppercase tracking-[0.16em] text-primary">
             {siteContent.reception.eyebrow}
           </div>
-          <h2 className="mt-2 font-serif text-[clamp(26px,4vw,40px)] leading-tight text-ink">
+          <h2 className="mt-2 font-serif text-[clamp(24px,3.4vw,38px)] leading-tight text-ink">
             {siteContent.reception.title}
           </h2>
           <p className="mt-3 max-w-2xl text-[15px] leading-7 text-muted">
@@ -18,7 +18,7 @@ export default function ReceptionSection() {
           </p>
         </div>
 
-        <div className="overflow-x-auto rounded-2xl border border-border">
+        <div className="overflow-x-auto rounded-2xl border border-border bg-white shadow-soft">
           <table className="min-w-[720px] w-full border-collapse">
             <thead className="bg-navy">
               <tr>

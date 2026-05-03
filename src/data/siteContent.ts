@@ -113,42 +113,42 @@ export const siteContent = {
     people: [
       {
         name: "Xabibullayev Sherzod Xabibullaxo‘jayevich",
-        role: "Agentlik direktori",
+        role: "Agency Director",
         phone: "55 503 1222 (100)",
         email: "info@meteo.uz",
-        receptionDay: "Payshanba",
+        receptionDay: "Thursday",
         receptionTime: "11:00 – 13:00",
       },
       {
         name: "Karimov Ibratjon Alijonovich",
-        role: "Agentlik direktori o‘rinbosari",
+        role: "Deputy Director of the Agency",
         phone: "78 150-86-35",
         email: "i.karimov@meteo.uz",
-        receptionDay: "Seshanba",
+        receptionDay: "Tuesday",
         receptionTime: "10:00 – 12:00",
       },
       {
         name: "Vakant",
-        role: "Raqamli texnologiyalar rivojlantirish bo‘yicha maslahatchi",
+        role: "Advisor to the Director on digital technology development",
         phone: "55-503-21-20 (103)",
         email: "sfi@meteo.uz",
-        receptionDay: "Chorshanba",
+        receptionDay: "Wednesday",
         receptionTime: "10:00 – 12:00",
       },
       {
         name: "Tashxodjayeva Nigora Baxtiyor qizi",
-        role: "Axborot siyosati bo‘yicha maslahatchi — Matbuot kotibi",
+        role: "Press Secretary / Information Policy Advisor",
         phone: "55-503-21-20 (203)",
         email: "is@meteo.uz",
-        receptionDay: "Juma",
+        receptionDay: "Friday",
         receptionTime: "10:00 – 13:00",
       },
       {
         name: "Kulumbetov Qudratjon Mamasharifovich",
-        role: "Ma’naviy-tarbiyaviy ishlar va Davlat tili masalalari bo‘yicha maslahatchi",
+        role: "Advisor on spiritual-educational effectiveness and state language legislation",
         phone: "55 503 1222",
         email: "",
-        receptionDay: "Payshanba",
+        receptionDay: "Thursday",
         receptionTime: "14:00 – 16:00",
       },
     ],
@@ -162,6 +162,7 @@ export const siteContent = {
     eyebrow: "Bog‘lanish",
     title: "Manzil va aloqa",
     lead: "Ish kunlari dushanba–juma, 09:00–18:00",
+    workingHours: "Dushanba–Juma, 09:00–18:00",
     address: "Toshkent sh., Yunusobod tumani, Osiyo ko‘chasi, 72A",
     phone: "+998555031222",
     phoneDisplay: "55 503 1222 (100)",
@@ -180,10 +181,25 @@ export const siteContent = {
     lead: "Yangiliklar bo‘limi statik ko‘rinishda. Keyinroq rasmiy manbalardan yangilanadi.",
     items: [
       {
+        tag: "Rasmiy",
         title: "Rasmiy yangiliklar",
-        date: "",
+        date: "2026",
         description:
-          "Bu bo‘limni rasmiy yangiliklar ro‘yxati bilan to‘ldirish mumkin (statik fayl orqali).",
+          "Rasmiy e’lonlar va agentlik faoliyatiga oid yangiliklar ushbu bo‘limda berib boriladi.",
+      },
+      {
+        tag: "Ma’lumot",
+        title: "Ob-havo ma’lumotlari",
+        date: "2026",
+        description:
+          "Kundalik ob-havo kuzatuvlari va foydali meteorologik ma’lumotlar uchun qisqa eslatmalar.",
+      },
+      {
+        tag: "Ogohlantirish",
+        title: "Ogohlantirishlar",
+        date: "2026",
+        description:
+          "Xavfli ob-havo hodisalari bo‘yicha ogohlantirishlar va tavsiyalar (statik ko‘rinish).",
       },
     ],
   },
@@ -192,6 +208,16 @@ export const siteContent = {
     links: [
       { label: "Rasmiy portal", href: "https://gov.uz/oz/hydromet" },
       { label: "Murojaat", href: "mailto:info@meteo.uz" },
+    ],
+    quickLinks: [
+      { label: "Ob-havo sharoiti", href: "#weather" },
+      { label: "Xizmatlar", href: "#services" },
+      { label: "Rahbariyat", href: "#leadership" },
+    ],
+    sections: [
+      { label: "Agentlik", href: "#about" },
+      { label: "Qabul", href: "#reception" },
+      { label: "Bog‘lanish", href: "#contact" },
     ],
   },
 } as const
