@@ -64,7 +64,9 @@ export default function Footer() {
   )
 }
 
-function FooterCol(props: { title: string; links: Array<{ label: string; href: string }> }) {
+type FooterLink = { label: string; href: string }
+
+function FooterCol(props: { title: string; links: ReadonlyArray<FooterLink> }) {
   return (
     <div>
       <div className="text-[11px] font-medium uppercase tracking-[0.16em] text-ice/45">
