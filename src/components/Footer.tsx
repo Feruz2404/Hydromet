@@ -1,7 +1,7 @@
 import { useState } from "react"
+import { Globe, Mail, MapPin, Phone } from "lucide-react"
 import { siteContent } from "../data/siteContent"
 import { cn } from "../lib/utils"
-import { Globe, Mail, MapPin, Phone } from "lucide-react"
 
 function BrandMark(props: { sizeClassName: string }) {
   const [logoFailed, setLogoFailed] = useState(false)
@@ -9,7 +9,7 @@ function BrandMark(props: { sizeClassName: string }) {
   return (
     <div
       className={cn(
-        "shrink-0 overflow-hidden rounded-xl border border-sky/20 bg-white/5 p-1.5",
+        "shrink-0 overflow-hidden rounded-2xl border border-sky/20 bg-white/[0.06] p-2 shadow-[0_10px_30px_rgba(0,0,0,0.25)]",
         props.sizeClassName,
       )}
       aria-hidden="true"
@@ -20,11 +20,13 @@ function BrandMark(props: { sizeClassName: string }) {
           alt=""
           className="h-full w-full object-contain"
           draggable={false}
+          decoding="async"
+          loading="lazy"
           onError={() => setLogoFailed(true)}
         />
       ) : (
-        <div className="flex h-full w-full items-center justify-center rounded-lg bg-gradient-to-br from-sky/20 to-primary/10">
-          <span className="font-serif text-[12px] text-ice/80">O‘</span>
+        <div className="flex h-full w-full items-center justify-center rounded-xl bg-gradient-to-br from-sky/20 to-primary/10">
+          <span className="font-serif text-[12px] text-ice/85">O‘zgidromet</span>
         </div>
       )}
     </div>
@@ -40,7 +42,8 @@ export default function Footer() {
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-5">
             <a href="#home" className="flex min-w-0 items-center gap-3">
-              <BrandMark sizeClassName="h-9 w-9" />
+              {/* 32–40px square container */}
+              <BrandMark sizeClassName="h-10 w-10" />
               <div className="min-w-0 leading-tight">
                 <div className="truncate font-serif text-base text-white">
                   {siteContent.brand.name}
@@ -50,10 +53,12 @@ export default function Footer() {
                 </div>
               </div>
             </a>
+
             <p className="mt-4 max-w-md text-[13px] leading-6 text-ice/45">
               O‘zbekiston Respublikasi Gidrometeorologiya xizmati agentligi — ob-havo
               va iqlim kuzatishlarida ishonchli davlat tashkiloti.
             </p>
+
             <div className="mt-6 space-y-2 text-[13px] text-ice/50">
               <FooterInfoRow icon={<MapPin className="h-4 w-4" />}>
                 {c.address}
@@ -79,9 +84,6 @@ export default function Footer() {
                 </a>
               </FooterInfoRow>
             </div>
-
-            {/* If assets are missing, avoid a broken icon by using our img fallback above.
-                Manual action is still required to upload: public/logo.png and public/favicon.png */}
           </div>
 
           <FooterCol

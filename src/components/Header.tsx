@@ -8,7 +8,7 @@ function BrandMark(props: { sizeClassName: string }) {
   return (
     <div
       className={cn(
-        "shrink-0 overflow-hidden rounded-xl border border-sky/20 bg-white/5 p-1.5",
+        "shrink-0 overflow-hidden rounded-2xl border border-sky/20 bg-white/[0.06] p-2 shadow-[0_10px_30px_rgba(0,0,0,0.25)]",
         props.sizeClassName,
       )}
       aria-hidden="true"
@@ -19,11 +19,13 @@ function BrandMark(props: { sizeClassName: string }) {
           alt=""
           className="h-full w-full object-contain"
           draggable={false}
+          decoding="async"
+          loading="eager"
           onError={() => setLogoFailed(true)}
         />
       ) : (
-        <div className="flex h-full w-full items-center justify-center rounded-lg bg-gradient-to-br from-sky/20 to-primary/10">
-          <span className="font-serif text-[12px] text-ice/80">O‘</span>
+        <div className="flex h-full w-full items-center justify-center rounded-xl bg-gradient-to-br from-sky/20 to-primary/10">
+          <span className="font-serif text-[12px] text-ice/85">O‘zgidromet</span>
         </div>
       )}
     </div>
@@ -43,15 +45,15 @@ export default function Header() {
   const nav = useMemo(() => siteContent.nav, [])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-sky/15 bg-navy/90 backdrop-blur supports-[backdrop-filter]:bg-navy/80">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-sky/15 bg-navy/85 backdrop-blur supports-[backdrop-filter]:bg-navy/75">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
         <a
           href="#home"
           className="flex min-w-0 items-center gap-3 text-white"
           aria-label={siteContent.brand.name}
         >
-          {/* 40px desktop, 36px mobile */}
-          <BrandMark sizeClassName="h-9 w-9 md:h-10 md:w-10" />
+          {/* 40–48px square container */}
+          <BrandMark sizeClassName="h-10 w-10 md:h-12 md:w-12" />
 
           <div className="min-w-0 leading-tight">
             <div className="truncate font-serif text-[17px] tracking-tight md:text-[18px]">
@@ -103,7 +105,7 @@ export default function Header() {
       </div>
 
       <div className={cn("md:hidden", open ? "block" : "hidden")}>
-        <div className="fixed inset-x-0 top-16 z-50 flex flex-col gap-1 border-b border-sky/10 bg-navy/95 px-5 pb-6 pt-4 backdrop-blur">
+        <div className="fixed inset-x-0 top-16 z-50 flex flex-col gap-1 border-b border-sky/10 bg-navy/92 px-5 pb-6 pt-4 backdrop-blur">
           {nav.map((item) => (
             <a
               key={item.href}
