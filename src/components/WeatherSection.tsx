@@ -62,13 +62,13 @@ export default function WeatherSection() {
   }, [fetchedAt])
 
   return (
-    <section id="weather" className="bg-mist py-16 md:py-24">
+    <section id="weather" className="bg-mist py-12 md:py-16 lg:py-20">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
-        <div className="mb-10 md:mb-14">
+        <div className="mb-8 md:mb-10">
           <div className="text-[11px] font-medium uppercase tracking-[0.16em] text-primary">
             Toshkent
           </div>
-          <h2 className="mt-2 font-serif text-[clamp(26px,4vw,40px)] leading-tight text-ink">
+          <h2 className="mt-2 font-serif text-[clamp(24px,3.4vw,38px)] leading-tight text-ink">
             Ob-havo sharoiti
           </h2>
           <p className="mt-3 max-w-2xl text-[15px] leading-7 text-muted">
@@ -76,7 +76,7 @@ export default function WeatherSection() {
           </p>
         </div>
 
-        <div className="rounded-2xl border border-border bg-white p-5 shadow-soft md:p-8">
+        <div className="rounded-2xl border border-border bg-white p-5 shadow-soft md:p-7">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
               <div className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
@@ -107,7 +107,7 @@ export default function WeatherSection() {
             </div>
           ) : null}
 
-          <div className="mt-6 grid gap-6 lg:grid-cols-2">
+          <div className="mt-6 grid gap-5 lg:grid-cols-2">
             <div className="rounded-2xl border border-border bg-mist p-5 md:p-6">
               <div className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
                 Joriy holat
